@@ -33,11 +33,11 @@ Point2D::Point2D(const Point2D& copyFromObject)
 	y = copyFromObject.y;
 }
 
-void Point2D::CalculateDistance(const Point2D& distantObject)
+double Point2D::CalculateDistance(const Point2D& distantObject)
 {
 	double distance;
 	distance = sqrt(pow((x - distantObject.x),2) + pow((y - distantObject.y), 2));
-	cout << endl << distance;
+	return distance;
 }
 
 string Point2D::toString()
@@ -47,11 +47,12 @@ string Point2D::toString()
 	return buffer;
 }
 
-Point2D& Point2D::operator+(const Point2D& addObject) 
+Point2D Point2D::operator+(const Point2D& addObject)
 {
-	x += addObject.x;
-	y += addObject.y;
-	return *this; 
+	Point2D newObject;
+	newObject.x = this->x + addObject.x;
+	newObject.y = this->y + addObject.y;
+	return newObject;
 }
 
 bool Point2D::operator==(const Point2D& compareObject)

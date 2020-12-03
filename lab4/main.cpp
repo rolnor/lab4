@@ -82,10 +82,28 @@ void test2d()
 	Point2D b(2, 4);
 	cout << "---------------------------------" << endl;
 	cout << "Point a: " << a.toString() << endl << "Point b: " << b.toString() << endl;
-	cout << "---------------------------------" << endl;
 
-	/*Point2D b = a;
-	cout << "Point b: " << b.toString() << endl;
-	if(a == b)
-		cout << "Point a and b are equal"*/
+	// 2. create a new point by using either the copy constructor or operator (=),
+	Point2D c = a;
+
+	// 3. print the field values of the new point, and do a comparison with a and b to see which point 
+	//    has the same value with the newly created point,
+	cout << "Point C: " << c.toString() << endl;
+	cout << "Point C is equal to A: " << (a == c) << endl;
+	cout << "Point C is equal to B: " << (b == c) << endl;
+
+	// 4. create a new point by using the + operator 
+	//    (i.e. add two existing point objects and assign the result to a new object)
+	Point2D d = a + b;
+
+	// 5. print the value of the new point and calculate the distance between any other point with new one,
+	cout << "Point D: " << d.toString() << endl;
+	cout << "Distance from D to point A: " << d.CalculateDistance(a) << endl;
+
+	// 6. and compare the new point with other points to see whether the new point is really a new or has the 
+	//    same value some other point. (make sure that the other points’ values are not all 0)
+	cout << "Point D is equal to A: " << (d == a) << endl;
+	cout << "Point D is equal to B: " << (d == b) << endl;
+	cout << "Point D is equal to B: " << (d == c) << endl;
+	cout << "---------------------------------" << endl;
 }

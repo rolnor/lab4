@@ -1,15 +1,17 @@
 #include<MotorVehicle.h>
 #include<point2d.h>
+#include <polyline.h>
 
 void createObject();
 void test2d();
+void polylineTest();
 
 int main()
 {
 	char choise = '0';
-	while (choise != '3')
+	while (choise != '4')
 	{
-		cout << "1. Task1: Create vehicle" << endl << "2. Task2: Point2d" << endl << "3. Exit" << endl;
+		cout << "1. Task1: Create vehicle" << endl << "2. Task2: Point2d" << endl << "3. Task 3: Polyline" << endl << "4. Exit" << endl;
 		cin >> choise;
 		switch(choise)
 		{
@@ -20,6 +22,9 @@ int main()
 				test2d();
 				break;
 			case '3':
+				polylineTest();
+				break;
+			case '4':
 				return 0;
 		}
 	}
@@ -105,5 +110,33 @@ void test2d()
 	cout << "Point D is equal to A: " << (d == a) << endl;
 	cout << "Point D is equal to B: " << (d == b) << endl;
 	cout << "Point D is equal to B: " << (d == c) << endl;
+	cout << "---------------------------------" << endl;
+}
+
+void polylineTest()
+{
+	Polyline test(3);
+	cout << "---------------------------------" << endl;
+	cout << "Contains points: " << test.containsPoint() << endl;
+	test.addPoint(1.0, 2.0);
+	cout << "Added point: ";
+	test.getPoint(0);
+	cout << "Contains points: " << test.containsPoint() << endl;
+	cout << "Number of points: " << test.numberOfPoints() << endl;
+	test.addPoint(4.0, 2.0);
+	cout << "Added point: ";
+	test.getPoint(1);
+	test.removeLastPoint();
+	test.addPoint(3.0, 2.0);
+	cout << "Removed last point and added point: ";
+	test.getPoint(1);
+	test.addPoint(2.0, 4.0);
+	cout << "Added point: ";
+	test.getPoint(2);
+	cout << "Number of points: " << test.numberOfPoints() << endl;
+	test.printLenght();
+	// add point to full polyline
+	cout << "Adding point to full polyline...";
+	test.addPoint(2.0, 4.0);
 	cout << "---------------------------------" << endl;
 }

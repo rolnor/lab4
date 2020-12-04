@@ -22,9 +22,20 @@ float Point2D::getY()
 	return this->y;
 }
 
+void Point2D::setX(float x)
+{
+	this->x = x;
+}
+
+void Point2D::setY(float y)
+{
+	this->y = y;
+}
+
 void Point2D::printValues()
 {
-	cout << x << endl << y;
+//	cout << x << endl << y << endl;
+	cout << "x: " << x << "\ty: " << y << endl;
 }
 
 Point2D::Point2D(const Point2D& copyFromObject) 

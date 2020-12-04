@@ -4,8 +4,8 @@ Polyline::Polyline(int arraySize)
 {
 	pointArray = new Point2D[arraySize];
 	this->arraySize = arraySize;
-	this->xNull = 0;
-	this->yNull = 0;
+	this->xNull = NULL;
+	this->yNull = NULL;
 	this->freeSpaces = arraySize;
 }
 
@@ -56,8 +56,8 @@ void Polyline::removeLastPoint()
 	this->freeSpaces = this->numberOfPoints()-1;
 	if (this->freeSpaces >= 0)
 	{
-		pointArray[this->freeSpaces].setX(0);
-		pointArray[this->freeSpaces].setY(0);
+		pointArray[this->freeSpaces].setX(this->xNull);
+		pointArray[this->freeSpaces].setY(this->yNull);
 	}	
 }
 

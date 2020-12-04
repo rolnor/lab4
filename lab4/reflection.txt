@@ -1,0 +1,16 @@
+Write a short reflection based on your lab experience (e.g. a text file inside your project). 
+The format is free, but you can use these questions as a starting point:
+
+-What did you learn? What did you know already?
+Usage of classes and memory management.
+
+-What was difficult in the lab? How did you overcome it?
+Might have misunderstood polyline. As is it creates an array with the specified size in the constructor.
+Dropping an element of an array would involve resizing via coping array elements and that 
+method felt out of scope for this lab.
+
+-How can the lab be improved?
+
+
+-Additionally, write an estimate how many hours you spent on this lab.
+~2 work days

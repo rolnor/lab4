@@ -2,8 +2,8 @@
 
 Point2D::Point2D()
 {
-	x = 0;
-	y = 0;
+	x = NULL;
+	y = NULL;
 }
 
 Point2D::Point2D(float iX, float iY)

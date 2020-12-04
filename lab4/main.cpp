@@ -115,7 +115,7 @@ void test2d()
 	//    same value some other point. (make sure that the other points’ values are not all 0)
 	cout << "Point D is equal to A: " << (d == a) << endl;
 	cout << "Point D is equal to B: " << (d == b) << endl;
-	cout << "Point D is equal to B: " << (d == c) << endl;
+	cout << "Point D is equal to C: " << (d == c) << endl;
 	cout << "---------------------------------" << endl;
 }
 

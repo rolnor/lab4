@@ -36,6 +36,9 @@
     <ClCompile Include="polyline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="carddeck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="polyline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="carddeck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

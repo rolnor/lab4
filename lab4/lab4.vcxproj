@@ -147,8 +147,10 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="point2d.cpp" />
     <ClCompile Include="polyline.cpp" />
+    <ClCompile Include="carddeck.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="carddeck.h" />
     <ClInclude Include="polyline.h" />
     <ClInclude Include="point2d.h" />
     <ClInclude Include="MotorVehicle.h" />

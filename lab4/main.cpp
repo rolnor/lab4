@@ -1,17 +1,20 @@
 #include<MotorVehicle.h>
 #include<point2d.h>
 #include <polyline.h>
+#include <carddeck.h>
 
 void createObject();
 void test2d();
 void polylineTest();
+void cardTest();
 
 int main()
 {
 	char choise = '0';
-	while (choise != '4')
+	while (choise != '5')
 	{
-		cout << "1. Task1: Create vehicle" << endl << "2. Task2: Point2d" << endl << "3. Task 3: Polyline" << endl << "4. Exit" << endl;
+		cout << "1. Task 1: Create vehicle" << endl << "2. Task 2: Point2d" << endl << "3. Task 3: Polyline" << endl 
+			 << "4. Task 4: Card deck" << endl <<"5. Exit" << endl;
 		cin >> choise;
 		switch(choise)
 		{
@@ -25,6 +28,9 @@ int main()
 				polylineTest();
 				break;
 			case '4':
+				cardTest();
+				break;
+			case '5':
 				return 0;
 		}
 	}
@@ -139,4 +145,10 @@ void polylineTest()
 	cout << "Adding point to full polyline...";
 	test.addPoint(2.0, 4.0);
 	cout << "---------------------------------" << endl;
+}
+
+void cardTest()
+{
+	CardDeck deck;
+	deck.printCards();
 }
